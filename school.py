@@ -21,7 +21,15 @@ class Staff(Person):
         super().__init__(name, age, country)
         self.position = position
         self.department = department
-
-    def __str__(self):
+    def work(self):
         return f"{self.name} works as a {self.position} in the {self.department} department."
     #Should Return: NAME works as a POSITION in the DEPARTMENT department. 
+
+person_1 = Person("Manny", 33, "USA")
+student_1 = Student("Tammy", 19, "Vietnam", "Computer Science", 3.54)
+staff_1 = Staff("Brittney", 36, "Canada", "Neuroscientist", "Biology")
+
+print("School Info")
+print(person_1.__str__())
+print(student_1.study())
+print(staff_1.work())
